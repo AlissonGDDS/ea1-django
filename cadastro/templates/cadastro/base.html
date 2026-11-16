@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Escola</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'lista_alunos' %}">Alunos</a> |
+        <a href="{% url 'lista_cursos' %}">Cursos</a> |
+        <a href="{% url 'produto_new' %}">Novo produto</a>
+    </nav>
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'cadastro/base.html' %}
+
+{% block content %}
+    <h1>Produtos cadastrados</h1>
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                <strong>{{ produto.nome }}</strong> - R$ {{ produto.preco }}
+                <br>
+                {{ produto.descricao }}
+                <br>
+                Validade: {{ produto.validade }}
+            </li>
+        {% empty %}
+            <li>Nenhum produto cadastrado.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'produto_new' %}">Cadastrar novo produto</a>
+{% endblock %}
